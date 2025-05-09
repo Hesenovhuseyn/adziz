@@ -1,8 +1,15 @@
-# Faster & Secure & Special Container #
-# Thanks to mkaraniya & zakaryan2004
+FROM python:3.10-slim
 
-FROM fusuf/asenauserbot:latest
+# Gerekli sistem bağımlılıklarını kur
+RUN apt-get update && apt-get install -y git
+
+# Repo klonla
 RUN git clone https://github.com/Hesenovhuseyn/adziz /root/adziz
 WORKDIR /root/adziz/
-RUN pip3 install -r requirements.txt
-CMD ["python3", "main.py"]  
+
+# Gereksinimleri yükle
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+# Ana betiği çalıştır
+CMD ["python", "main.py"]

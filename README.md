@@ -31,7 +31,7 @@
 ### Basit Yöntem
 Eğer botu kurma hakkında fikriniz yoksa burayı okuyunuz: [Kurulum Rehberi](https://github.com/Quiec/AsenaUserBot/wiki/Kurulum/)
 
-[![Deploy]<a href="https://www.heroku.com/deploy?template=https://github.com/Ferid18/neonuserbot">
+[![Deploy]<a href="https://www.heroku.com/deploy?template=https://github.com/Hesenovhuseyn/adziz">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 ### Zor Yöntem

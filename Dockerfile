@@ -1,15 +1,20 @@
 FROM python:3.10-slim
 
-# Gerekli sistem bağımlılıklarını kur
-RUN apt-get update && apt-get install -y git
+# Sistem bağımlılıklarını kur
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    python3-dev \
+    gcc \
+    git \
+    libffi-dev \
+    libssl-dev
 
-# Repo klonla
+# Uygulamayı klonla
 RUN git clone https://github.com/Hesenovhuseyn/adziz /root/adziz
 WORKDIR /root/adziz/
 
-# Gereksinimleri yükle
-RUN pip install --upgrade pip
+# Pip'i güncelle ve gereksinimleri kur
+RUN pip install --upgrade pip setuptools wheel
 RUN pip install -r requirements.txt
 
-# Ana betiği çalıştır
 CMD ["python", "main.py"]
